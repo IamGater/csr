@@ -12,6 +12,7 @@ body {
   background-position: top;
   padding: 20px;
   color: white;
+  height: 100vh;
 }
 
 a {
@@ -34,6 +35,8 @@ a {
 
 .header__wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
@@ -76,7 +79,7 @@ a {
 }
 
 .main__text {
-  border: 4px dotted #44bcff;
+  border: 3px dashed #44bcff;
   padding: 16px 30px;
   border-radius: 100px;
   font-size: 22px;
@@ -105,4 +108,43 @@ a {
 .main__link::after {
   content: "";
   background-image: url(./img/telegram.svg);
+}
+
+@media (max-width: 756px) {
+  .header__text {
+    font-size: 11px;
+  }
+  .logo {
+    width: 71px;
+    height: 24px;
+    border-right: 2px solid white;
+  }
+  .header__link {
+    font-size: 11px;
+    padding: 10px 15px;
+  }
+  .main__title {
+    font-size: 24px;
+    max-width: 605px;
+  }
+  .main__text {
+    font-size: 14px;
+    padding: 9px 30px;
+  }
+  .main__bell {
+    width: 17px;
+    height: 17px;
+    top: -7px;
+    right: 23px;
+  }
+  .main__link {
+    font-size: 16px;
+    padding: 16px 65px;
+  }
+}
+
+@media (max-width: 580px) {
+  body {
+    background-image: url(./img/background2.webp);
+  }
 }
