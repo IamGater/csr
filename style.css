@@ -111,13 +111,34 @@ a {
   background-image: url(./img/telegram.svg);
 }
 
-.spaceship2 {
-  display: none;
-  width: 120px;
-}
-
 .spaceship {
   position: absolute;
+}
+
+.spaceship2 {
+  display: none;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  bottom: 80px;
+  left: 10px;
+  animation: orbit 20s linear infinite;
+}
+
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, 0) rotate(0deg) translateY(calc(3vh))
+      rotate(0deg);
+
+    left: 0;
+  }
+
+  100% {
+    transform: translate(-50%, 0) rotate(360deg) translateY(calc(3vh))
+      rotate(-180deg);
+
+    left: 100vw;
+  }
 }
 
 @media (max-width: 756px) {
@@ -164,6 +185,3 @@ a {
     background-image: url(./img/background2.webp);
   }
 }
-
-
-
